@@ -1,0 +1,131 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixin" as *;
+
+.calculator {
+  width: 100%;
+  max-width: 327px;
+
+  @include breakpoint {
+    max-width: 540px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    text-transform: lowercase;
+  }
+
+  &__themes {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 1.5rem;
+    row-gap: 0.3rem;
+    text-transform: uppercase;
+    align-items: center;
+  }
+
+  &__label {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 0.8rem;
+    position: relative;
+    top: 3px;
+  }
+
+  &__numbers {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__selector {
+    grid-column: 2;
+    grid-row: 2;
+    width: 4.5rem;
+    height: 1.5rem;
+    border-radius: 10rem;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__ball {
+    position: absolute;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    top: 0.2rem;
+  }
+
+  &__display {
+    text-align: right;
+    font-size: 2rem;
+    padding: 1.75rem 1.625rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint {
+      padding: 2rem;
+      font-size: 2.6rem;
+    }
+  }
+
+  &__input {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @include breakpoint {
+      gap: 1.7rem;
+    }
+  }
+
+  &__btn {
+    aspect-ratio: 1 / 1;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    transition: top 0.3s linear;
+    position: relative;
+
+    &:active {
+      box-shadow: none;
+      top: 5px;
+    }
+
+    @include breakpoint {
+      aspect-ratio: 1.8 / 1;
+    }
+
+    &--secondary {
+      font-size: 1.3rem;
+    }
+
+    &--secondary,
+    &--tertiary {
+      &:hover {
+        filter: brightness(1.5);
+      }
+    }
+
+    &--wide {
+      grid-column: span 2;
+      aspect-ratio: 2 / 1;
+
+      @include breakpoint {
+        aspect-ratio: 3.6 / 1;
+      }
+    }
+  }
+}

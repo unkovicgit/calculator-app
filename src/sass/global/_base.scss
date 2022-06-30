@@ -1,0 +1,27 @@
+@use "../abstract/mixin" as *;
+
+main {
+  min-height: 100vh;
+  padding: 1.875rem 1.5rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.theme-1 {
+  @include mainStl(1);
+}
+
+main.theme-2 {
+  @include mainStl(2);
+}
+
+main.theme-3 {
+  @include mainStl(3);
+}
+
+button {
+  cursor: pointer;
+}

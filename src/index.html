@@ -1,26 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/style.scss" />
 
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <main id="root" class="theme-1">
+      <section aria-label="calculator" class="calculator">
+        <header class="calculator__header">
+          <h1 class="calculator__title">Calc</h1>
+          <div class="calculator__themes">
+            <p class="calculator__label">Theme</p>
+            <p class="calculator__numbers">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </p>
+            <div class="calculator__selector">
+              <div class="calculator__ball"></div>
+            </div>
+          </div>
+        </header>
+        <div class="calculator__display">399,981</div>
+        <div class="calculator__input">
+          <button class="calculator__btn calculator__btn--primary">7</button>
+          <button class="calculator__btn calculator__btn--primary">8</button>
+          <button class="calculator__btn calculator__btn--primary">9</button>
+          <button class="calculator__btn calculator__btn--secondary">
+            Del
+          </button>
+          <button class="calculator__btn calculator__btn--primary">4</button>
+          <button class="calculator__btn calculator__btn--primary">5</button>
+          <button class="calculator__btn calculator__btn--primary">6</button>
+          <button class="calculator__btn calculator__btn--primary">
+            &plus;
+          </button>
+          <button class="calculator__btn calculator__btn--primary">1</button>
+          <button class="calculator__btn calculator__btn--primary">2</button>
+          <button class="calculator__btn calculator__btn--primary">3</button>
+          <button class="calculator__btn calculator__btn--primary">
+            &minus;
+          </button>
+          <button class="calculator__btn calculator__btn--primary">.</button>
+          <button class="calculator__btn calculator__btn--primary">0</button>
+          <button class="calculator__btn calculator__btn--primary">
+            &#8725;
+          </button>
+          <button class="calculator__btn calculator__btn--primary">
+            &times;
+          </button>
+          <button
+            class="calculator__btn calculator__btn--wide calculator__btn--secondary"
+          >
+            Reset
+          </button>
+          <button
+            class="calculator__btn calculator__btn--wide calculator__btn--tertiary"
+          >
+            &equals;
+          </button>
+        </div>
+      </section>
+    </main>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script type="module" src="ts/index.ts"></script>
+  </body>
 </html>

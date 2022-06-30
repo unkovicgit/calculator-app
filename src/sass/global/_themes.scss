@@ -1,0 +1,62 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixin" as *;
+
+@for $i from 1 through 3 {
+  .theme-#{$i} {
+    .calculator {
+      &__selector {
+        background-color: map-get($map: $selectorBg, $key: $i);
+      }
+
+      &__ball {
+        background-color: map-get($map: $ballBg, $key: $i);
+      }
+
+      &__display {
+        background-color: map-get($map: $displayBg, $key: $i);
+      }
+
+      &__input {
+        background-color: map-get($map: $inputBg, $key: $i);
+      }
+
+      &__btn {
+        &--primary {
+          background-color: map-get($map: $btnPrimary, $key: $i);
+          color: map-get($map: $btnPrimaryCl, $key: $i);
+          box-shadow: map-get($map: $btnPrimaryShd, $key: $i);
+        }
+
+        &--secondary {
+          background-color: map-get($map: $btnSecondary, $key: $i);
+          color: map-get($map: $btnSecondaryCl, $key: $i);
+          box-shadow: map-get($map: $btnSecondaryShd, $key: $i);
+        }
+
+        &--tertiary {
+          background-color: map-get($map: $btnTertiary, $key: $i);
+          color: map-get($map: $btnTertiaryCl, $key: $i);
+          box-shadow: map-get($map: $btnTertiaryShd, $key: $i);
+        }
+      }
+    }
+  }
+}
+
+.theme-1 {
+  .calculator__ball {
+    left: 0.4rem;
+  }
+}
+
+.theme-2 {
+  .calculator__ball {
+    left: 1.5rem;
+  }
+}
+
+.theme-3 {
+  .calculator__ball {
+    left: 2.9rem;
+  }
+}

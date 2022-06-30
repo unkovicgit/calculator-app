@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+@mixin mainStl($theme) {
+  background-color: map-get($map: $mainBg, $key: $theme);
+  color: map-get($map: $textCl, $key: $theme);
+}
+
+@mixin breakpoint {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
